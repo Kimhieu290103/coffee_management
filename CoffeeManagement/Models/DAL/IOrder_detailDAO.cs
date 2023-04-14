@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace CoffeeManagement.Models.DAL
 {
-    interface IOrder_detailDAO : IDAO<Order_detail>
+    interface IOrder_detailDAO : IDAO<Order_detail, int>
     {
     }
 }

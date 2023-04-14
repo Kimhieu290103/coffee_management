@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace CoffeeManagement.Models.DAL
 {
-    interface IDAO<T>
+    interface IDAO<T, U>
     {
         List<T> getAll();
-        T getById(int id);
+        T getById(U id);
         void insert(T data);
         void update(T data);
-        void delete(int id);
+        void delete(U id);
     }
 }

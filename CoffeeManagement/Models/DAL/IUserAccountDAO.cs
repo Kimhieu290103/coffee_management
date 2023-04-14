@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace CoffeeManagement.Models.DAL
 {
-    interface IUserAccountDAO : IDAO<UserAccount>
+    interface IUserAccountDAO : IDAO<UserAccount, string>
     {
     }
 }
