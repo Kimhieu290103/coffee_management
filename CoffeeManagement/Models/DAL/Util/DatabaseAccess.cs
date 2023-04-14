@@ -24,7 +24,6 @@ namespace CoffeeManagement.Models.DAL
             catch (Exception ex)
             {
                 throw new Exception(ex.Message);
-                /*Console.WriteLine("error");*/
             }
 
         }

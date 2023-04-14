@@ -11,7 +11,16 @@ namespace CoffeeManagement.Models.DAL.Implement
     {
         public void delete(int id)
         {
-            throw new NotImplementedException();
+            if (DatabaseAccess.connection == null)
+            {
+                DatabaseAccess.connect();
+            }
+
+            int rowChanged = DatabaseAccess.deleteById("DeleteOrderById", id);
+            if (rowChanged == 0)
+            {
+                throw new Exception("Not found object!");
+            }
         }
 
         public List<Orders> getAll()
@@ -57,7 +66,7 @@ namespace CoffeeManagement.Models.DAL.Implement
 
         public void insert(Orders data)
         {
-            throw new NotImplementedException();
+            
         }
 
         public void update(Orders data)

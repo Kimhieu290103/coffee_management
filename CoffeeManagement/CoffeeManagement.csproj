@@ -133,10 +133,16 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\OrdersController.cs" />
+    <Compile Include="Controllers\ProductController.cs" />
+    <Compile Include="Controllers\UserAccountController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\DAL\DatabaseAccess.cs" />
+    <Compile Include="Models\DAL\Implement\ProductDAO.cs" />
+    <Compile Include="Models\DAL\Implement\UserAccountDAO.cs" />
+    <Compile Include="Models\DAL\IProductDAO.cs" />
+    <Compile Include="Models\DAL\IUserAccountDAO.cs" />
+    <Compile Include="Models\DAL\Util\DatabaseAccess.cs" />
     <Compile Include="Models\DAL\IDAO.cs" />
     <Compile Include="Models\DAL\Implement\OrdersDAO.cs" />
     <Compile Include="Models\DAL\Implement\Order_detailDAO.cs" />
@@ -190,6 +196,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Product\" />
+    <Folder Include="Views\UserAccount\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

@@ -7,10 +7,11 @@ namespace CoffeeManagement.Models.Model
 {
     public class Orders
     {
-        private int id { get; set; }
+        private int id;
         private int tableNumber;
-        private DateTime time { get; set; }
-        private byte state { get; set; }
+        private DateTime time;
+        private byte state;
+
 
         public Orders(int id, int tableNumber, DateTime time, byte state)
         {
@@ -20,13 +21,10 @@ namespace CoffeeManagement.Models.Model
             this.state = state;
         }
 
-        public void SetTableNumber(int tableNumber)
-        {
-            this.tableNumber = tableNumber;
-        }
-        public int GetTableNumber()
-        {
-            return this.tableNumber;
-        }
+        public int Id { get => id; set => id = value; }
+        public int TableNumber { get => tableNumber; set => tableNumber = value; }
+        public DateTime Time { get => time; set => time = value; }
+        public byte State { get => state; set => state = value; }
+
     }
 }

@@ -30,7 +30,7 @@ namespace CoffeeManagement.Controllers
         public int GetTableNameById()
         {
             Orders orders =  odrersDAO.getById(1);
-            return orders.GetTableNumber();
+            return orders.TableNumber;
         }
     }
 }
